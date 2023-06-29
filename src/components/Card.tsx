@@ -2,7 +2,8 @@
 import { FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { CameraAlt, Favorite, Info } from '@mui/icons-material';
+import { Favorite, Info } from '@mui/icons-material';
+import { Avatar } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardHeader from '@mui/material/CardHeader';
@@ -22,7 +23,8 @@ export type CardDetailsProps = {
 const CardDetails: FC<CardDetailsProps> = ({ title, subheader, urlImage, description, id }) => {
   const navigate = useNavigate();
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, minWidth: 200, }}>
+      <Avatar alt={title} src={urlImage} sx={{ m: 2 } } />
       <CardHeader title={title} subheader={subheader} />
       <Link style={{
         textDecoration: 'none',
@@ -40,11 +42,6 @@ const CardDetails: FC<CardDetailsProps> = ({ title, subheader, urlImage, descrip
         <IconButton onClick={() => navigate(`details/${id}`)} aria-label="Details">
           <Info />
         </IconButton>
-        {urlImage &&
-          <IconButton aria-label="photo viwer">
-            <CameraAlt />
-          </IconButton>
-        }
       </CardActions>
     </Card>
   );

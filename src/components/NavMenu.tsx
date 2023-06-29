@@ -14,19 +14,10 @@ const NavMenu: FC = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Corujão da T32
+            Random Users
           </Typography>
-          <Button onClick={() => navgate('/login')} color="inherit">Login</Button>
+          <Button onClick={() => navgate('/')} color="inherit">Login</Button>
           <Button onClick={() => navgate('/dashboard')} color="inherit">Dashboard</Button>
         </Toolbar>
       </AppBar>
