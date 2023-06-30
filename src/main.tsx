@@ -1,13 +1,16 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import App from './App.tsx';
+import { LightTheme } from './themes/Light.ts';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <BrowserRouter>
-    <CssBaseline />
-    <App />
-  </BrowserRouter>,
+  <ThemeProvider theme={LightTheme}>
+    <BrowserRouter>
+      <CssBaseline />
+      <App />
+    </BrowserRouter>
+  </ThemeProvider>
 );

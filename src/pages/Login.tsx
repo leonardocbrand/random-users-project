@@ -49,7 +49,7 @@ const Login = () => {
         elevation={ 8 }
         onSubmit={handleSubmit(createUser)}
         sx={ {
-          borderRadius: '10px',
+          borderRadius: '20px',
           borderBottom: '1px solid ##CED4DA',
           display: 'flex',
           flexDirection: 'column',
