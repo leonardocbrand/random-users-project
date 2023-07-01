@@ -8,7 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 const NavMenu: FC = () => {
-  const navgate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -17,8 +17,8 @@ const NavMenu: FC = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Random Users
           </Typography>
-          <Button onClick={() => navgate('/')} color="inherit">Login</Button>
-          <Button onClick={() => navgate('/dashboard')} color="inherit">Dashboard</Button>
+          <Button onClick={() => navigate('/')} color="inherit">Login</Button>
+          <Button onClick={() => navigate('/dashboard')} color="inherit">Dashboard</Button>
         </Toolbar>
       </AppBar>
     </Box>
