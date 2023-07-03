@@ -11,7 +11,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router />
-      <ToastContainer theme='dark' />
+      <ToastContainer theme='dark' position='bottom-right' />
     </QueryClientProvider>
   );
 }

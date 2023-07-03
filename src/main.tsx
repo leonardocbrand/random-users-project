@@ -4,10 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import App from './App.tsx';
-import { LightTheme } from './themes/Light.ts';
+import { DarkTheme } from './themes/Dark.ts';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <ThemeProvider theme={LightTheme}>
+  <ThemeProvider theme={DarkTheme}>
     <BrowserRouter>
       <CssBaseline />
       <App />

@@ -1,4 +1,4 @@
-import { CircularProgress, Grid } from '@mui/material';
+import { CircularProgress, Container, Grid } from '@mui/material';
 
 import CardDetails from '../../components/Card';
 
@@ -25,13 +25,20 @@ export type dataType = {
     'medium': string;
     'thumbnail': string;
   };
+  'phone': string;
 }
 
 const Dashboard = () => {
 
   const { data, isLoading } = useRandomUser();
 
-  if (isLoading) return <CircularProgress color='primary' />;
+  if (isLoading) { 
+    return (
+      <Container sx={ { height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' } }> 
+        <CircularProgress color='primary' /> 
+      </Container>
+    );
+  }
 
   return (
     <Grid container rowSpacing={{ xs: 4, sm: 5 }} columnSpacing={{ xs: 1, sm: 2, md: 3 }} p={8} width={'100%'}>
@@ -40,10 +47,11 @@ const Dashboard = () => {
           return (
             <Grid key={user.login.uuid} item xs={12} sm={6} md={3}>
               <CardDetails
-                id={1}
-                title={user.name.first + user.name.last}
-                subheader={user.login.username}
-                description={user.location.country}
+                title={`${user.name.first} ${user.name.last}`}
+                subheader={user.location.country}
+                login={'Login: ' + user.login.username}
+                password={'Password: ' + user.login.password}
+                phone={user.phone}
                 urlImage={user.picture.thumbnail}
               />
             </Grid>
