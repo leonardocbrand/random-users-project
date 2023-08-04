@@ -1,5 +1,5 @@
 const style = {
-  form : 
+  form: 
     {
       borderRadius: '20px',
       borderBottom: '1px solid ##CED4DA',
@@ -7,7 +7,7 @@ const style = {
       flexDirection: 'column',
       alignItems: 'center',
       padding: 10,
-    }
+    },
 };
 
 export default style;

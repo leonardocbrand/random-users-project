@@ -43,22 +43,11 @@ const Login = () => {
         sx={ style.form }
       >
         <Container component="header" sx={ { margin: '0px 0 34px 0px ' } }>
-          <Typography variant="h1" fontSize={ 24 } fontWeight={ 700 }>
-              Faça seu login 
+          <Typography variant="h1" fontSize={ 23 } textAlign='center' fontWeight={ 700 }>
+              Faça o seu login
             {' '}
-            <span></span>
           </Typography>
         </Container>
-        <TextField
-          label="Nome"
-          autoComplete="off"
-          type="text"
-          variant="filled"
-          margin='normal'
-          size='small'
-          {...register('name')}
-        />
-        <ErrorMsg errorState={errors.name} />
         <TextField
           label="Email"
           autoComplete="off"

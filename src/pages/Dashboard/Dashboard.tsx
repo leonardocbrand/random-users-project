@@ -1,31 +1,35 @@
 import { CircularProgress, Container, Grid } from '@mui/material';
 
-import CardDetails from '../../components/Card';
+import CardDetails from '../../components/CardDetails';
 
 import { useRandomUser } from '../../service/randomUserAPI';
 
 export type dataType = {
-  'gender': string;
-  'name':{
-    'first': string;
-    'last': string;
+  gender: string;
+  name:{
+    first: string;
+    last: string;
   };
-  'location': {
-    'city': string;
-    'state': string;
-    'country': string;
+  location: {
+    city: string;
+    state: string;
+    country: string;
+    street: {
+      number: number;
+      name: string;
+    }
   };
-  'email': string;
-  'login': {
-    'uuid': string;
-    'username': string;
-    'password': string;
+  email: string;
+  login: {
+    uuid: string;
+    username: string;
+    password: string;
   };
-  'picture': {
-    'medium': string;
-    'thumbnail': string;
+  picture: {
+    medium: string;
+    thumbnail: string;
   };
-  'phone': string;
+  phone: string;
 }
 
 const Dashboard = () => {
@@ -49,8 +53,9 @@ const Dashboard = () => {
               <CardDetails
                 title={`${user.name.first} ${user.name.last}`}
                 subheader={user.location.country}
-                login={'Login: ' + user.login.username}
-                password={'Password: ' + user.login.password}
+                email={'Email: ' + user.email}
+                city={'Cidade: ' + user.location.city}
+                address={'Endereço: ' + user.location.street.name + ', ' + user.location.street.number}
                 phone={user.phone}
                 urlImage={user.picture.thumbnail}
               />

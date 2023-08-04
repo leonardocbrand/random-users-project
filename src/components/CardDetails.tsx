@@ -14,13 +14,14 @@ import { modalStyle } from './styles/modal';
 export type CardDetailsProps = {
   title: string;
   subheader: string;
-  login: string;
-  password: string;
+  email: string;
+  city: string;
+  address: string;
   phone: string;
   urlImage: string | undefined;
 }
 
-const CardDetails: FC<CardDetailsProps> = ({ title, subheader, urlImage, login, password, phone }) => {
+const CardDetails: FC<CardDetailsProps> = ({ title, subheader, urlImage, email, address, city, phone }) => {
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -34,10 +35,13 @@ const CardDetails: FC<CardDetailsProps> = ({ title, subheader, urlImage, login, 
       </Box>
       <StyledCard>
         <Typography variant="body2" color="text.secondary">
-          {login}
+          {email}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {password}
+          {city}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {address}
         </Typography>
       </StyledCard>
       <CardActions disableSpacing>
