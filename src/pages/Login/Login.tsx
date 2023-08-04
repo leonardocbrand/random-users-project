@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -12,8 +11,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { CreateUserFormData, createUserFormSchema } from './schema';
 import style from './style';
 
-const Login = () => {
-  const [user, setUser] = useState<CreateUserFormData>({} as CreateUserFormData);
+type LoginProps = {
+  setUser:  React.Dispatch<React.SetStateAction<CreateUserFormData>>
+}
+const Login = ({ setUser }: LoginProps) => {
+  // const [user, setUser] = useState<CreateUserFormData>({} as CreateUserFormData);
 
   const navigate = useNavigate();
 

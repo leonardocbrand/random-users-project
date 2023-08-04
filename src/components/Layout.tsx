@@ -1,15 +1,21 @@
-import { FC, Fragment } from 'react';
+import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
+
+import { CreateUserFormData } from '../pages/Login/schema';
 
 import NavMenu from './NavMenu';
 
-const Layout: FC = () => {
+type LayoutProps = {
+  user: CreateUserFormData
+}
+
+function Layout({ user }: LayoutProps) {
   return (
     <Fragment>
-      <NavMenu />
+      <NavMenu user={ user }/>
       <Outlet />
     </Fragment>
   );
-};
+}
 
 export default Layout;
