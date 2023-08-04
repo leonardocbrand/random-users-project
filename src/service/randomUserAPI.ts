@@ -1,6 +1,7 @@
-import { dataType } from '../pages/Dashboard/Dashboard';
 
 import { useQuery } from '@tanstack/react-query';
+
+import { dataType } from '../types';
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 

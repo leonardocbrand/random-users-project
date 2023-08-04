@@ -5,7 +5,7 @@ import CardDetails from '../../components/CardDetails';
 import { useRandomUser } from '../../service/randomUserAPI';
 
 const Dashboard = () => {
-
+  
   const { data, isLoading } = useRandomUser();
 
   if (isLoading) { 
