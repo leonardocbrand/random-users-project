@@ -8,7 +8,7 @@ Este é o repositório do projeto de uma aplicação Front End de um dashboard q
 
 ## Visão Geral
 
-Esta aplicação foi desenvolvida com o intuito de desenvolver o conhecimento em formulários a partir de bibliotecas como React Hook Form e ZOD para validação dos formulários.
+Esta aplicação foi desenvolvida com o intuito de desenvolver o conhecimento em formulários a partir de bibliotecas como React Hook Form e ZOD.
 
 ## Funcionalidades
 
